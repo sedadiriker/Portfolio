@@ -1,0 +1,61 @@
+.parag-1{
+    animation: rightmovie;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+.parag-2{
+    animation: leftmovie;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+.btn{
+    animation: bottommovie;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animated-text {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  
+@keyframes rightmovie {
+    from{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes leftmovie {
+    from{
+        transform: translateX(700px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes bottommovie {
+    from{
+        transform: translateY(-700px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

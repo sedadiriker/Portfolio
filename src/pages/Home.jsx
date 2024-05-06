@@ -1,6 +1,9 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
+import "./Home.css"
+
 
 const Home = () => {
+
   return (
     <Box
     sx={{
@@ -16,7 +19,7 @@ const Home = () => {
       width="50%"
       height="100%"
       sx={{
-        backgroundColor: "#C0A68F80",
+        backgroundColor: {xs:"#F3F3F3", md:"#C0A68F80"},
       }}
     />
     <Box
@@ -30,12 +33,23 @@ const Home = () => {
           sx={{
             height: "100%",
             boxShadow: "1px 1px 40px gray",
+            
           }}
         >
-          <Grid item xs={12} md={6} >
-            
+          
+          <Grid item xs={12} md={6} display={"flex"} flexDirection={"column"} alignItems={"start"} justifyContent={"center"} sx={{ backgroundColor:"#DFD2C6", overflow:"hidden"}} pl={5} position={"relative"} >
+          <Box className="parag-1" component={"p"} fontSize={"2.2rem"}>Hi, I am Seda,
+          </Box>
+          <Box className="parag-2" component={"p"} fontSize={"1.2rem"}>I am a constantly self-improving, <br /> passionate <span style={{fontSize:"2rem", color:"#426971"}}>Frontend Developer</span>.
+          </Box>
+          <Box mt={5} alignSelf={"center"} display={"flex"} gap={3}>
+            <Button className="btn" sx={{border:"1px solid #426971", color:"#426971"}}>View my projects</Button>
+            <Button className="btn" sx={{border:"1px solid #426971", color:"#426971"}}>Contact Me</Button>
+          </Box>
+
+          <Box position={"absolute"} top={20} left={10} fontFamily={'"Pacifico", cursive;'} fontSize={"1.5rem"} letterSpacing={3} color={"#426971"}>Seda Diriker</Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={{backgroundImage:"url(images/boho-art-7375748_1280.jpg)"}}>
+          <Grid item xs={12} md={6} sx={{backgroundImage:"url(images/boho-art-7375748_1280.jpg)", backgroundPosition:{xs:"top", md:"top left"}, backgroundSize:{xs:"cover", md:"auto"}, backgroundRepeat:"no-repeat"}}>
           </Grid>
         </Grid>
       </Box>
