@@ -1,10 +1,19 @@
-import React from 'react'
+import { Box } from "@mui/material"
 
 const Project = () => {
   return (
-    <div>
+    <Box sx={{
+      height: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "row",
       
-    </div>
+    }}>
+      <Box height="100%" pt={20}>Projeler
+      <Box></Box>
+      </Box>
+    </Box>
   )
 }
 

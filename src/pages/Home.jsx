@@ -12,8 +12,7 @@ const navigate = useNavigate()
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      flexDirection: "row",
-      
+      flexDirection: "row",     
     }}
   >
     <Box
@@ -28,6 +27,8 @@ const navigate = useNavigate()
       height="100%"
      sx={{backgroundColor:"#F3F3F3"}}
     />
+
+    //! Logo
     <Box width={"95%"} height={"90%"} sx={{ position:"absolute" }}>
         <Grid
           container

@@ -13,14 +13,21 @@ const navigation = [
 ];
 const Navbar = () => {
   return (
-    <Box position={"fixed"} top={40} left={245} zIndex={2} width={"80%"} overflow={"hidden"} >
+    <Box
+      position={"fixed"}
+      top={40}
+      left={245}
+      zIndex={2}
+      width={"80%"}
+      overflow={"hidden"}
+    >
       <Box
         py={3}
         sx={{ backgroundColor: "#F1EEEA" }}
         display={"flex"}
         gap={8}
         justifyContent={"end"}
-        width={'120%'}
+        width={"120%"}
         paddingRight={35}
       >
         {navigation.map(({ name, path, icon: Icon }) => (
@@ -52,7 +59,10 @@ const Navbar = () => {
                 textTransform: "uppercase",
               }}
             >
-              <Icon style={{ color: "#62402A" }} />
+              <Box>
+                <Icon sx={{color:"#62402A",}} />
+              </Box>
+
               {name}
             </Link>
           </Box>
