@@ -1,9 +1,10 @@
 import { Box, Button, Grid } from "@mui/material";
 import "./Home.css"
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
-
+const navigate = useNavigate()
   return (
     <Box
     sx={{
@@ -43,11 +44,11 @@ const Home = () => {
           <Box className="parag-2" component={"p"} fontSize={"1.2rem"}>I am a constantly self-improving, <br /> passionate <span style={{fontSize:"2rem", color:"#426971"}}>Frontend Developer</span>.
           </Box>
           <Box mt={5} alignSelf={"center"} display={"flex"} gap={3}>
-            <Button className="btn" sx={{border:"1px solid #426971", color:"#426971"}}>View my projects</Button>
-            <Button className="btn" sx={{border:"1px solid #426971", color:"#426971"}}>Contact Me</Button>
+            <Button onClick={()=>navigate("/project")} className="btn" sx={{border:"1px solid #426971", color:"#426971"}}>View my projects</Button>
+            <Button onClick={()=> navigate("/contact")} className="btn" sx={{border:"1px solid #426971", color:"#426971"}}>Contact Me</Button>
           </Box>
 
-          <Box position={"absolute"} top={20} left={10} fontFamily={'"Pacifico", cursive;'} fontSize={"1.5rem"} letterSpacing={3} color={"#426971"}>Seda Diriker</Box>
+          <Box position={"absolute"} top={20} left={10} fontFamily={'"Pacifico", cursive;'} fontSize={"1.8rem"} letterSpacing={2} color={"#426971"} sx={{textShadow:"1px 1px 2px black"}}>Seda Diriker</Box>
           </Grid>
           <Grid item xs={12} md={6} sx={{backgroundImage:"url(images/boho-art-7375748_1280.jpg)", backgroundPosition:{xs:"top", md:"top left"}, backgroundSize:{xs:"cover", md:"auto"}, backgroundRepeat:"no-repeat"}}>
           </Grid>
